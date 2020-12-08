@@ -1,0 +1,17 @@
+- hosts: 192.168.43.56
+  vars_files:
+        - aws_ec2_var.yml
+  tasks:
+  - name: launching AWS instance using Ansible
+    amazon.aws.ec2:
+        key_name: "{{ key }}"
+        instance_type: "{{ instanceType }}"
+        image: "{{ image_id }}"
+        region: "{{ region_name }}"
+        group_id: "{{ security_grp_id }}"
+        vpc_subnet_id: "{{ subnet_id }}"
+        wait: yes
+        count: 1
+        assign_public_ip: yes
+        aws_access_key: "{{ access_key }}"
+        aws_secret_key: "{{ secret_key }}"

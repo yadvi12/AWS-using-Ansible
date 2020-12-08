@@ -1,0 +1,9 @@
+key: "keyhadoop"
+instanceType: "t2.micro"
+image_id: "ami-08f63db601b82ff5f"
+region_name: "ap-south-1"
+security_grp_id: "sg-0223f665"
+subnet_id: "subnet-03f58a4f"
+access_key: "your access key"
+secret_key: "your secret key"
+
